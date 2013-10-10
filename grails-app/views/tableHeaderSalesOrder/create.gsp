@@ -7,7 +7,7 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 		<r:require modules="typeahead-js"/>
 		<r:require modules="typeahead-bootstrap-css"/>
-		<script src="/webnico/web-app/js/hogan.js" type="text/javascript" ></script>
+		<g:javascript library='hogan' />
 	</head>
 	<body>
 		<script type="text/javascript">

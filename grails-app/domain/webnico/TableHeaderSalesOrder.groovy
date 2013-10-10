@@ -27,7 +27,7 @@ class TableHeaderSalesOrder {
 	}
 
 	static constraints = {
-		nomorHeaderSalesOrder maxSize: 15
+		nomorHeaderSalesOrder maxSize: 15, blank: false
 		tanggalTertera nullable: true
 		idCustomer nullable: true
 		approvedBy nullable: true, maxSize: 30
