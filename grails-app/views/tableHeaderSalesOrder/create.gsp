@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="tboot">
 		<g:set var="entityName" value="${message(code: 'tableHeaderSalesOrder.label', default: 'TableHeaderSalesOrder')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 		<r:require modules="typeahead-js"/>
@@ -22,7 +22,7 @@
 
 		</script>
 
-		<a href="#create-tableHeaderSalesOrder" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -49,7 +49,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
 		</div>

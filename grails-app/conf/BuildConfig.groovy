@@ -51,6 +51,8 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
 
+        runtime ":twitter-bootstrap:3.0.0"
+
         compile ":twitter-typeahead:0.9.3.1"
 		
 		compile ":db-reverse-engineer:0.5"
