@@ -9,4 +9,9 @@ modules = {
     tbootstrap {
     	resource url:'js/bootstrap.min.js'
     }
+
+    ttypeahead {
+    	resource url:'js/typeahead.min.js'
+    }
+
 }

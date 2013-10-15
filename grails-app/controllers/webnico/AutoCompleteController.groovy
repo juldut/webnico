@@ -16,7 +16,7 @@ class AutoCompleteController {
             from ${TableMasterCustomer.name} where namaCustomer like concat('%', :paramNama, '%')
         """
         def arrNamaCust = TableMasterCustomer.executeQuery(sqlStr, [paramNama: params.term?.toString()])
-        log.error(arrNamaCust as JSON)
+        // log.error(arrNamaCust as JSON)
         render arrNamaCust as JSON    	
     }
 }

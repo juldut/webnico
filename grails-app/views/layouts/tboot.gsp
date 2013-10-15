@@ -2,9 +2,12 @@
 <html lang="en">
    <head>
       <title><g:layoutTitle default="Grails"/></title>
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
+%{-- 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">		
+ --}%		
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'navbar-fixed-top.css')}" type="text/css">
-		<g:javascript library='tbootstrap' />
+		<g:javascript library='jquery' plugin="jquery"/>
+		<r:require modules="bootstrap"/>
+
       <g:layoutHead/>
       <r:layoutResources/>
       
@@ -22,7 +25,7 @@
 		    </div>
 		    <div class="navbar-collapse collapse">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">Home</a></li>
+		        <li ${controllerName == null ? 'class="active"' : ''}><a class="" href="${createLink(uri: '/')}">Home</a></li>
 		        <li><a href="#about">About</a></li>
 		        <li><a href="#contact">Contact</a></li>
 		        <li class="dropdown">
@@ -38,16 +41,17 @@
 		          </ul>
 		        </li>
 		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="../navbar/">Default</a></li>
-		        <li><a href="../navbar-static-top/">Static top</a></li>
-		        <li class="active"><a href="./">Fixed top</a></li>
-		      </ul>
 		    </div><!--/.nav-collapse -->
 		  </div>
 		</div>
 
-      <g:layoutBody/>
-      <r:layoutResources/>
+		<h3>Controller : ${params.controller}</h3><br/>
+		<h3>Action : ${params.action}</h3>
+
+		<div class="container">
+
+			<g:layoutBody/>
+  		</div>
+		<r:layoutResources/>
    </body>
 </html>

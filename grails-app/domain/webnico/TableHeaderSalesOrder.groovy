@@ -31,7 +31,7 @@ class TableHeaderSalesOrder {
 		tanggalTertera nullable: true
 		idCustomer nullable: true
 		approvedBy nullable: true, maxSize: 30
-		namaCustomer nullable: true, maxSize: 100
+		namaCustomer blank: false, maxSize: 100
 		alamatPengiriman nullable: true
 		nomorPoCustomer nullable: true, maxSize: 75
 		tanggalSystem nullable: true
