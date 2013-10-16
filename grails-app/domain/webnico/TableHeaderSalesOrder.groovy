@@ -22,7 +22,8 @@ class TableHeaderSalesOrder {
 	String alamatNpwp
 
 	static mapping = {
-		id name: "nomorHeaderSalesOrder"
+		id name: "nomorHeaderSalesOrder", column: "nomor_header_sales_order", generator: "assigned"
+
 		version false
 	}
 
@@ -46,4 +47,6 @@ class TableHeaderSalesOrder {
 		namaNpwp nullable: true, maxSize: 100
 		alamatNpwp nullable: true
 	}
+
+	
 }

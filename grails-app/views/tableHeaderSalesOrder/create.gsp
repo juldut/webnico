@@ -14,23 +14,21 @@
 	<body>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#tbConto").typeahead({
+				$("#namaCustomer").typeahead({
 					name: "conto",
 					remote: {
 						url: "/webnico/AutoComplete/masterCustomer/?term=%QUERY",
-						filter: function(parsedResponse) {
-							var regex = new RegExp( '(' + $("#tbConto").val() + ')', 'gi' );
+						filter: function(parsedResponse, param2) {
 
 							for (var i=0; i<parsedResponse.length; i++) {
 								currElement = parsedResponse[i];
-								parsedResponse[i].value = "<p>" + parsedResponse[i].value + "</p>";
+								// parsedResponse[i].value = "<p>" + parsedResponse[i].value + "</p>";
 							}
 
-							console.log(parsedResponse);
 							return(parsedResponse);
 						},
 					},
-					template: '{{value}} - {{alamatCust}}',
+					template: "{{value}} - {{alamatCust}}",
 					engine: Hogan,
 					// highlighter: function (item) {
 					//     var regex = new RegExp( '(' + this.query + ')', 'gi' );
@@ -38,7 +36,7 @@
 					// }
 				});
 
-				$('#tbConto').bind('typeahead:selected', function(obj, datum) { 
+				$('#namaCustomer').bind('typeahead:selected', function(obj, datum) { 
 					$("#idCustomer").val(datum.id);
 				});
 
@@ -58,10 +56,6 @@
           <div class="row">
             <div class="col-6 col-sm-6 col-lg-12">
 			
-			<input type="text" id="tbConto" class="form-control"/>
-
-			<br/>
-
               
 				<div id="create-tableHeaderSalesOrder" class="content scaffold-create" role="main">
 					<h1><g:message code="default.create.label" args="[entityName]" /></h1>

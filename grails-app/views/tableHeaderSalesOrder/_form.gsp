@@ -28,21 +28,23 @@
 	<g:field name="idCustomer" type="number" value="${tableHeaderSalesOrderInstance.idCustomer}"/>
 </div>
 
-<div class="form-group ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'approvedBy', 'error')} ">
-	<label for="approvedBy">
-		<g:message code="tableHeaderSalesOrder.approvedBy.label" default="Approved By" />
-		
-	</label>
-	<g:textField name="approvedBy" maxlength="30" value="${tableHeaderSalesOrderInstance?.approvedBy}"/>
+<div class="row">
+	<div class="form-group col-md-4 ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'approvedBy', 'has-error')} ">
+		<label for="approvedBy" class="control-label ">
+			<g:message code="tableHeaderSalesOrder.approvedBy.label" default="Approved By" />
+			
+		</label>
+		<g:textField name="approvedBy" maxlength="30" value="${tableHeaderSalesOrderInstance?.approvedBy}" class="form-control"/>
+	</div>
 </div>
 
-<div class="form-group ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'namaCustomer', 'error')} ">
-	<label for="namaCustomer">
-		<g:message code="tableHeaderSalesOrder.namaCustomer.label" default="Nama Customer" />
-		
-	</label>
-	<g:textField name="namaCustomer" maxlength="100" value="${tableHeaderSalesOrderInstance?.namaCustomer}"/>
-</div>
+	<div class="form-group ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'namaCustomer', 'error')} ">
+		<label for="namaCustomer" class="control-label">
+			<g:message code="tableHeaderSalesOrder.namaCustomer.label" default="Nama Customer" />
+		</label>
+		<br/>
+		<g:textField name="namaCustomer" maxlength="100" value="${tableHeaderSalesOrderInstance?.namaCustomer}" class="form-control" />
+	</div>
 
 <div class="form-group ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'alamatPengiriman', 'error')} ">
 	<label for="alamatPengiriman">

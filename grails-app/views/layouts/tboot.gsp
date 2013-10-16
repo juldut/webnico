@@ -45,13 +45,14 @@
 		  </div>
 		</div>
 
-		<h3>Controller : ${params.controller}</h3><br/>
-		<h3>Action : ${params.action}</h3>
 
 		<div class="container">
 
 			<g:layoutBody/>
   		</div>
+
+		<h3>Controller : ${params.controller}</h3><br/>
+		<h3>Action : ${params.action}</h3>
 		<r:layoutResources/>
    </body>
 </html>

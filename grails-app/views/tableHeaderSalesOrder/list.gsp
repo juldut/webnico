@@ -28,8 +28,6 @@
 					
 						<g:sortableColumn property="tanggalTertera" title="${message(code: 'tableHeaderSalesOrder.tanggalTertera.label', default: 'Tanggal Tertera')}" />
 					
-						<g:sortableColumn property="idCustomer" title="${message(code: 'tableHeaderSalesOrder.idCustomer.label', default: 'Id Customer')}" />
-					
 						<g:sortableColumn property="approvedBy" title="${message(code: 'tableHeaderSalesOrder.approvedBy.label', default: 'Approved By')}" />
 					
 						<g:sortableColumn property="namaCustomer" title="${message(code: 'tableHeaderSalesOrder.namaCustomer.label', default: 'Nama Customer')}" />
@@ -45,9 +43,7 @@
 						<td><g:link action="show" id="${tableHeaderSalesOrderInstance.id}">${fieldValue(bean: tableHeaderSalesOrderInstance, field: "nomorHeaderSalesOrder")}</g:link></td>
 					
 						<td><g:formatDate date="${tableHeaderSalesOrderInstance.tanggalTertera}" /></td>
-					
-						<td>${fieldValue(bean: tableHeaderSalesOrderInstance, field: "idCustomer")}</td>
-					
+										
 						<td>${fieldValue(bean: tableHeaderSalesOrderInstance, field: "approvedBy")}</td>
 					
 						<td>${fieldValue(bean: tableHeaderSalesOrderInstance, field: "namaCustomer")}</td>

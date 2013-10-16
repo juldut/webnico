@@ -18,7 +18,15 @@ class TableHeaderSalesOrderController {
 
     def create() {
 		def tempMasterSalesman = TableMasterSalesman.executeQuery("SELECT new map(id as id, namaSalesman as namaSalesman) FROM ${TableMasterSalesman.name}")
-		// log.error(tempMasterSalesman as JSON)
+		
+        // log.error(tempMasterSalesman as JSON)
+
+        def tempHDSO = TableHeaderSalesOrder.get("NMSO13090361")
+        // def tempHDSO = TableHeaderSalesOrder.get(1)
+        log.error(tempHDSO as JSON)
+
+        
+
         [tableHeaderSalesOrderInstance: new TableHeaderSalesOrder(params), masterSalesman : tempMasterSalesman]
     }
 
