@@ -1,6 +1,7 @@
 package webnico
 
 class TableHeaderSalesOrder {
+	
 
 	String nomorHeaderSalesOrder
 	Date tanggalTertera
@@ -22,7 +23,7 @@ class TableHeaderSalesOrder {
 	String alamatNpwp
 
 	static mapping = {
-		id name: "nomorHeaderSalesOrder", column: "nomor_header_sales_order", generator: "assigned"
+		id generator: "assigned", name:"nomorHeaderSalesOrder"
 
 		version false
 	}

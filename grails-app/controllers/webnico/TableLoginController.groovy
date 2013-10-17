@@ -17,8 +17,8 @@ class TableLoginController {
     }
 
     def create() {
-        def rowLogin = TableLogin.get("supervisor")
-        log.error(rowLogin as JSON)
+        // def rowLogin = TableLogin.get("supervisor")
+        // log.error(rowLogin as JSON)
 
         [tableLoginInstance: new TableLogin(params)]
     }
@@ -34,7 +34,7 @@ class TableLoginController {
         redirect(action: "show", id: tableLoginInstance.id)
     }
 
-    def show(Long id) {
+    def show(String id) {
         def tableLoginInstance = TableLogin.get(id)
         if (!tableLoginInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'tableLogin.label', default: 'TableLogin'), id])
@@ -45,7 +45,7 @@ class TableLoginController {
         [tableLoginInstance: tableLoginInstance]
     }
 
-    def edit(Long id) {
+    def edit(String id) {
         def tableLoginInstance = TableLogin.get(id)
         if (!tableLoginInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'tableLogin.label', default: 'TableLogin'), id])
@@ -56,7 +56,7 @@ class TableLoginController {
         [tableLoginInstance: tableLoginInstance]
     }
 
-    def update(Long id, Long version) {
+    def update(String id, Long version) {
         def tableLoginInstance = TableLogin.get(id)
         if (!tableLoginInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'tableLogin.label', default: 'TableLogin'), id])
@@ -85,7 +85,7 @@ class TableLoginController {
         redirect(action: "show", id: tableLoginInstance.id)
     }
 
-    def delete(Long id) {
+    def delete(String id) {
         def tableLoginInstance = TableLogin.get(id)
         if (!tableLoginInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'tableLogin.label', default: 'TableLogin'), id])
