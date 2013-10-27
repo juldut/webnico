@@ -16,13 +16,15 @@ class TableHeaderSuratJalan {
 	String kotaPengiriman
 	String catatan
 
+	static hasMany = [tableDetailSuratJalans: TableDetailSuratJalan]
+
 	static mapping = {
-		id name: "nomorHeaderSuratJalan", generator: "assigned"
+		id column: "hdsj_id", generator: "sequence", params:[sequence: "table_header_surat_jalan_hdsj_id_seq"]
 		version false
 	}
 
 	static constraints = {
-		nomorHeaderSuratJalan maxSize: 15
+		nomorHeaderSuratJalan maxSize: 15, unique: true
 		tanggalTertera nullable: true
 		idCustomer nullable: true
 		namaCustomer nullable: true, maxSize: 100
