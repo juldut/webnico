@@ -38,4 +38,5 @@ class TableHeaderSuratJalan {
 		kotaPengiriman nullable: true, maxSize: 50
 		catatan nullable: true
 	}
+
 }

@@ -140,7 +140,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${tableHeaderSuratJalanInstance?.tableDetailSuratJalans}">
+%{-- 				<g:if test="${tableHeaderSuratJalanInstance?.tableDetailSuratJalans}">
 				<li class="fieldcontain">
 					<span id="tableDetailSuratJalans-label" class="property-label"><g:message code="tableHeaderSuratJalan.tableDetailSuratJalans.label" default="Table Detail Surat Jalans" /></span>
 					
@@ -150,8 +150,40 @@
 					
 				</li>
 				</g:if>
-			
+ --}%			
 			</ol>
+
+
+			<g:if test="${tableHeaderSuratJalanInstance?.tableDetailSuratJalans}">
+
+				<table>
+					<thead>
+						<tr>
+							<th>Nama Barang</th>
+							<th>Harga Barang</th>
+							<th>Jumlah</th>
+							<th>Satuan</th>
+						</tr>
+					</thead>
+					<tbody>
+					<g:each in="${tableHeaderSuratJalanInstance.tableDetailSuratJalans}" status="i" var="t">
+						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						
+							<td><g:link controller="tableDetailSuratJalan" action="show" id="${t.id}">${fieldValue(bean: t, field: "namaBarang")}</g:link></td>
+						
+							<td>${fieldValue(bean: t, field: "hargaBarang")}</td>
+						
+							<td>${fieldValue(bean: t, field: "jumlahBarang")}</td>
+						
+							<td>${fieldValue(bean: t, field: "satuan")}</td>
+						
+						</tr>
+					</g:each>
+					</tbody>
+				</table>
+
+			</g:if>
+
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${tableHeaderSuratJalanInstance?.id}" />

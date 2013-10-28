@@ -1,6 +1,7 @@
 package webnico
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.converters.JSON
 
 class TableHeaderSuratJalanController {
 
@@ -11,7 +12,8 @@ class TableHeaderSuratJalanController {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 10, 100)        
+
         [tableHeaderSuratJalanInstanceList: TableHeaderSuratJalan.list(params), tableHeaderSuratJalanInstanceTotal: TableHeaderSuratJalan.count()]
     }
 
@@ -32,6 +34,7 @@ class TableHeaderSuratJalanController {
 
     def show(Long id) {
         def tableHeaderSuratJalanInstance = TableHeaderSuratJalan.get(id)
+
         if (!tableHeaderSuratJalanInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'tableHeaderSuratJalan.label', default: 'TableHeaderSuratJalan'), id])
             redirect(action: "list")
