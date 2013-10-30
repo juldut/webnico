@@ -1,7 +1,6 @@
 <%@ page import="webnico.TableHeaderSuratJalan" %>
 
 
-
 <div class="fieldcontain ${hasErrors(bean: tableHeaderSuratJalanInstance, field: 'nomorHeaderSuratJalan', 'error')} ">
 	<label for="nomorHeaderSuratJalan">
 		<g:message code="tableHeaderSuratJalan.nomorHeaderSuratJalan.label" default="Nomor Header Surat Jalan" />

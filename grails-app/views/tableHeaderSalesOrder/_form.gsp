@@ -43,7 +43,7 @@
 			<g:message code="tableHeaderSalesOrder.namaCustomer.label" default="Nama Customer" />
 		</label>
 		<br/>
-		<g:textField name="namaCustomer" maxlength="100" value="${tableHeaderSalesOrderInstance?.namaCustomer}" class="form-control" />
+		<g:textField name="namaCustomer" maxlength="190" value="${tableHeaderSalesOrderInstance?.namaCustomer}" class="form-control"  />
 	</div>
 
 <div class="form-group ${hasErrors(bean: tableHeaderSalesOrderInstance, field: 'alamatPengiriman', 'error')} ">

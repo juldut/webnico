@@ -5,6 +5,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'tableHeaderSuratJalan.label', default: 'TableHeaderSuratJalan')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+
 	</head>
 	<body>
 		<a href="#create-tableHeaderSuratJalan" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

@@ -5,8 +5,8 @@
 		<meta name="layout" content="tboot">
 		<g:set var="entityName" value="${message(code: 'tableHeaderSalesOrder.label', default: 'TableHeaderSalesOrder')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'typeahead.js-bootstrap.css')}" type="text/css">
-		
 		<r:require modules="typeahead-js"/>
 		<g:javascript library='hogan' />
 
